@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'octofit_tracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'octofit_tracker_db',
+        'NAME': 'octofit_db',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
             'host': 'mongodb://localhost:27017/',
@@ -126,6 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Use custom user model
+AUTH_USER_MODEL = 'octofit_tracker.User'
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
